@@ -14,6 +14,8 @@
 		341BBB7629DFAB9900F3C7CA /* DITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BBB7529DFAB9900F3C7CA /* DITTests.swift */; };
 		341BBB8029DFAB9900F3C7CA /* DITUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BBB7F29DFAB9900F3C7CA /* DITUITests.swift */; };
 		341BBB8229DFAB9900F3C7CA /* DITUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BBB8129DFAB9900F3C7CA /* DITUITestsLaunchTests.swift */; };
+		341BBB8F29DFABD600F3C7CA /* DITFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341BBB8E29DFABD600F3C7CA /* DITFeature.swift */; };
+		341BBB9229DFABF700F3C7CA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 341BBB9129DFABF700F3C7CA /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		341BBB7B29DFAB9900F3C7CA /* DITUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DITUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		341BBB7F29DFAB9900F3C7CA /* DITUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DITUITests.swift; sourceTree = "<group>"; };
 		341BBB8129DFAB9900F3C7CA /* DITUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DITUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		341BBB8E29DFABD600F3C7CA /* DITFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DITFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341BBB9229DFABF700F3C7CA /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +102,7 @@
 				341BBB6629DFAB9800F3C7CA /* ContentView.swift */,
 				341BBB6829DFAB9900F3C7CA /* Assets.xcassets */,
 				341BBB6A29DFAB9900F3C7CA /* Preview Content */,
+				341BBB8E29DFABD600F3C7CA /* DITFeature.swift */,
 			);
 			path = DIT;
 			sourceTree = "<group>";
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = DIT;
+			packageProductDependencies = (
+				341BBB9129DFABF700F3C7CA /* ComposableArchitecture */,
+			);
 			productName = DIT;
 			productReference = 341BBB6129DFAB9800F3C7CA /* DIT.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 341BBB5829DFAB9800F3C7CA;
+			packageReferences = (
+				341BBB9029DFABF700F3C7CA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 341BBB6229DFAB9800F3C7CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341BBB8F29DFABD600F3C7CA /* DITFeature.swift in Sources */,
 				341BBB6729DFAB9800F3C7CA /* ContentView.swift in Sources */,
 				341BBB6529DFAB9800F3C7CA /* DITApp.swift in Sources */,
 			);
@@ -583,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		341BBB9029DFABF700F3C7CA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		341BBB9129DFABF700F3C7CA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 341BBB9029DFABF700F3C7CA /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 341BBB5929DFAB9800F3C7CA /* Project object */;
 }
